@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { CoolBack } from '../coolBack/coolBack.component';
+import { GraphicText } from '../graphicText/graphicText.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CoolBack
+    CoolBack,
+    GraphicText
   ],
   imports: [
     BrowserModule,
