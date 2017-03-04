@@ -6,12 +6,15 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { CoolBack } from '../coolBack/coolBack.component';
 import { GraphicText } from '../graphicText/graphicText.component';
+import { PeerAudio } from '../peer-audio/peer-audio.component';
+import { Spacer } from '../spacer/spacer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CoolBack,
-    GraphicText
+    GraphicText,
+    PeerAudio,
+    Spacer,
   ],
   imports: [
     BrowserModule,

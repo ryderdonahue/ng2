@@ -5,6 +5,10 @@ body {
     color: white;
 }
 
-.relative { 
+.relative {
     position: relative;
+}
+
+div {
+    width: 100%;
 }
