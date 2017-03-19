@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CoolBack } from '../coolBack/coolBack.component';
 import { GraphicText } from '../graphicText/graphicText.component';
 import { PeerAudio } from '../peer-audio/peer-audio.component';
+import { SiteTitle } from '../site-title/site-title.component';
 import { Spacer } from '../spacer/spacer.component';
 
 @NgModule({
@@ -14,6 +15,7 @@ import { Spacer } from '../spacer/spacer.component';
     AppComponent,
     GraphicText,
     PeerAudio,
+    SiteTitle,
     Spacer,
   ],
   imports: [

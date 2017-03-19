@@ -7,14 +7,14 @@
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
     height: 1px;
-    width: 200px;
+    text-align: center;
 }
 
 @keyframes grow {
     0% {
-        width: 0px;
+        width: 0%;
     }
     100% {
-        width: 200px;
+        width: 100%;
     }
 }

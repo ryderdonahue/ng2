@@ -5,4 +5,5 @@ import { OnInit, Component, Input, ChangeDetectorRef } from '@angular/core';
   styleUrls: ['./spacer.component.css']
 })
 export class Spacer {
+    @Input() width: string = '900';
 }
