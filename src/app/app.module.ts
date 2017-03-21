@@ -9,10 +9,12 @@ import { GraphicText } from '../graphicText/graphicText.component';
 import { PeerAudio } from '../peer-audio/peer-audio.component';
 import { SiteTitle } from '../site-title/site-title.component';
 import { Spacer } from '../spacer/spacer.component';
-
+import { Icon } from '../icon/icon.component';
+import { Core } from '../Core';
 @NgModule({
   declarations: [
     AppComponent,
+    Icon,
     GraphicText,
     PeerAudio,
     SiteTitle,
@@ -23,7 +25,7 @@ import { Spacer } from '../spacer/spacer.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [Core,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

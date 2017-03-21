@@ -1,7 +1,6 @@
 .spacer {
     margin-top: 15px;
     margin-bottom: 15px;
-    
     background: white;
     animation-name: grow;
     animation-duration: 500ms;
@@ -12,9 +11,9 @@
 
 @keyframes grow {
     0% {
-        width: 0%;
+        transform: scale(0.1);
     }
     100% {
-        width: 100%;
+        transform: scale(1);
     }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, ChangeDetectorRef } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 
 @Component({
   selector: 'peer-audio',
@@ -7,13 +8,12 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./peer-audio.component.css']
 })
 export class PeerAudio {
-  constructor(private ref: ChangeDetectorRef) {
-  }
+
 
   @ViewChild('peerAudio') peerAudio: ElementRef;
 
   peer;
-
+  private voiceServerUrl = 'http://localhost:8117';
   myAudioLevel;
   private myAudioLevelObs: BehaviorSubject<number> = new BehaviorSubject<number>(0);
 
@@ -25,7 +25,16 @@ export class PeerAudio {
   mypeerid: BehaviorSubject<string> = new BehaviorSubject<string>('');
   public connected: boolean = false;
 
+  constructor(private ref: ChangeDetectorRef, private http: Http) {
+  }
+
   ngOnInit() {
+
+    this.http.post(this.voiceServerUrl, { derp: 'derpString' }).subscribe(response => {
+      console.log(response);
+    })
+
+
     this.myAudioLevelObs.subscribe(num => {
       this.myAudioLevel = num;
       this.ref.detectChanges();
